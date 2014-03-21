@@ -6,7 +6,7 @@ var markdownpdf = require('markdown-pdf')
   , program = require('commander')
   , html = ''
 
-program.version(require('./package.json').version)
+program.version(require('../package.json').version)
   .usage('[options] <markdown-file-path>')
   .option('<markdown-file-path>', "Path of the markdown file to convert")
   .option('-o, --out [path]', "Path of where to save the PDF")
@@ -29,7 +29,7 @@ fs.createReadStream(program.args[0])
       });
     },
 
-    runningsPath: __dirname + '/runnings.js'
+    runningsPath: __dirname + '/../runnings.js'
 
   }))
   .pipe(fs.createWriteStream(program.out))
