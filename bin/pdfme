@@ -29,7 +29,8 @@ fs.createReadStream(program.args[0])
       });
     },
 
-    runningsPath: __dirname + '/../runnings.js'
+    runningsPath: __dirname + '/../runnings.js',
+    cssPath: __dirname + '/../pdf.css'
 
   }))
   .pipe(fs.createWriteStream(program.out))
